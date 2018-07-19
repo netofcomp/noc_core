@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/netofcomp/noc_core#"
+     xml:base="http://purl.org/netofcomp/noc_core"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:core-ontology="http://purl.org/netofcomp/noc_core#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://purl.org/netofcomp/noc_core">
+        <owl:versionIRI rdf:resource="http://purl.org/netofcomp/noc_core/1.0.0"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/obi/2017-02-22/obi.owl"/>
+    </owl:Ontology>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001937 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001937"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+     
+     
+     
+    <!-- http://purl.org/netofcomp/noc_core#assessedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/netofcomp/noc_core#assessedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/netofcomp/noc_core#HumanRequirement"/>
+        <rdfs:range rdf:resource="http://purl.org/netofcomp/noc_core#Expert"/>
+    </owl:ObjectProperty>
+
+
+    <!-- http://purl.org/netofcomp/noc_core#declaredBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/netofcomp/noc_core#declaredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/netofcomp/noc_core#HumanRequirement"/>
+        <rdfs:range rdf:resource="http://purl.org/netofcomp/noc_core#Subject"/>
+    </owl:ObjectProperty>
+
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+     
+     
+     <!-- http://purl.org/netofcomp/noc_core#compliesTo -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/netofcomp/noc_core#compliesTo">
+        <rdfs:domain rdf:resource="http://purl.org/netofcomp/noc_core#Metric"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+     
+     
+     
+    <!-- http://purl.org/netofcomp/noc_core#dateEnd -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/netofcomp/noc_core#dateEnd">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/netofcomp/noc_core#Application"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+     
+     
+     
+     <!-- http://purl.org/openeed/ond-core#dateStart -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/netofcomp/noc_core#dateStart">
+        <rdfs:domain rdf:resource="http://purl.org/netofcomp/noc_core#Application"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://purl.org/netofcomp/noc_core#facet -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/netofcomp/noc_core#facet">
+        <rdfs:domain rdf:resource="http://purl.org/netofcomp/noc_core#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+    
+    <!-- http://purl.org/netofcomp/noc_core#name -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/netofcomp/noc_core#name">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/netofcomp/noc_core#Category"/>
+                    <rdf:Description rdf:about="http://purl.org/netofcomp/noc_core#Metric"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://purl.org/netofcomp/noc_core#value -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.orgnetofcomp/noc_core#value">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/netofcomp/noc_core#Metric"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+     
+     
+     
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
+        <owl:equivalentClass rdf:resource="http://purl.org/netofcomp/noc_core#Metric"/>
+    </rdf:Description>
+     
+     
+     
+     
+    <!-- http://purl.org/netofcomp/noc_core#Category -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#Category"/>
+    
+
+
+    <!-- http://purl.org/netofcomp/noc_core#Community -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#Community"/>
+    
+
+
+
+    <!-- http://purl.org/netofcomp/noc_core#Competence -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#Competence">
+        <rdfs:subClassOf rdf:resource="http://purl.org/netofcomp/noc_core#HumanRequirement"/>
+        <owl:disjointWith rdf:resource="http://purl.org/openeed/ond-core#Knowledge"/>
+        <owl:disjointWith rdf:resource="http://purl.org/openeed/ond-core#Skill"/>
+    </owl:Class>
+
+
+    <!-- http://purl.org/netofcomp/noc_core#Expert -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#Expert">
+        <rdfs:subClassOf rdf:resource="http://purl.org/netofcomp/noc_core#Person"/>
+    </owl:Class>
+
+
+    <!-- http://purl.org/openeed/ond-core#HumanRequirement -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#HumanRequirement"/>
+    
+    
+    <!-- http://purl.org/netofcomp/noc_core#Metric -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#Metric">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>Metric</rdfs:label>
+    </owl:Class>
+    
+    
+    <!-- http://purl.org/netofcomp/noc_core#Knowledge -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#Knowledge">
+        <rdfs:subClassOf rdf:resource="http://purl.org/netofcomp/noc_core#HumanRequirement"/>
+        <owl:disjointWith rdf:resource="http://purl.org/netofcomp/noc_core#Competence"/>
+        <owl:disjointWith rdf:resource="http://purl.org/netofcomp/noc_core#Skill"/>
+    </owl:Class>
+    
+    
+     <!-- http://purl.org/netofcomp/noc_core#Skill -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#Skill">
+        <rdfs:subClassOf rdf:resource="http://purl.org/netofcomp/noc_core#HumanRequirement"/>
+        <owl:disjointWith rdf:resource="http://purl.org/netofcomp/noc_core#Knowledge"/>
+        <owl:disjointWith rdf:resource="http://purl.org/netofcomp/noc_core#Competence"/>
+    </owl:Class>
+    
+    
+    
+    <!-- http://purl.org/netofcomp/noc_core#CompetenceTheory -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#CompetenceTheory"/>
+    
+    
+    
+    
+    
+    <!-- http://purl.org/netofcomp/noc_core#OrderedCategory -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#OrderedCategory">
+        <rdfs:subClassOf rdf:resource="http://purl.org/netofcomp/noc_core#Category"/>
+    </owl:Class>
+    
+    
+    <!-- http://purl.org/netofcomp/noc_core#Person -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#Person">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+    </owl:Class>
+    
+    
+    
+    <!-- http://purl.org/netofcomp/noc_core#Subject -->
+
+    <owl:Class rdf:about="http://purl.org/netofcomp/noc_core#Subject">
+        <rdfs:subClassOf rdf:resource="http://purl.org/netofcomp/noc_core#Person"/>
+    </owl:Class>
+    
+    
+    
+    <!-- http://www.w3.org/2006/vcard/ns#Individual -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Individual"/>
+    
+    
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
